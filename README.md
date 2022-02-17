@@ -1,29 +1,48 @@
 # Fundamentos da arquitetura de software
 O propósito desse repositório é armazenar estudos sobre o assunto e servir de repositório de consulta, mostrando as definições e exemplos.
 
-# Conteúdo a serem estudados:
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Programação orientada a objetos</label>
-</div>
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Principios S.O.L.I.D</label>
-</div>
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Injeção de dependência</label>
-</div>
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Clean code</label>
-</div>
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Padrões de projeto</label>
-</div>
-<div>
-  <input type="checkbox" id="horns" name="horns">
-  <label for="horns">Arquitetura</label>
-</div>
+## 📝 Conteúdos a serem estudados:
+ 
+- [ ] Programação orientada a objetos
+  - [ ] Pilares
+  - [ ] Estado e Comportamento
+  - [ ] Herança
+  - [ ] Abstração
+  - [ ] Polimorfismo
+  - [ ] Encapsulamento
+  - [ ] Interface x Implementação
+  - [ ] Herança x Composição
+- [ ] S.O.L.I.D
+  - [ ] Princípios 
+  - [ ] S - Single Responsability
+  - [ ] O - Open Closed
+  - [ ] L - Liskov Subtitution 
+  - [ ] I - Interface Segregation
+  - [ ] D - Dependency Inversion
+- [ ] Injeção de dependência
+  - [ ] ...
+- [ ] Clean Code
+  - [ ] ...
+- [ ] Design Patterns
+  - [ ] Criacionais
+    - [ ] Factory Method
+    - [ ] Singleton
+    - [ ] ...
+  - [ ] Estruturais
+     - [ ] Adapter
+     - [ ] Decorator
+     - [ ] ...
+  - [ ] Comportamentais
+       - [ ] Command
+       - [ ] Strategy
+       - [ ] Observer
+       - [ ] ...
+- [ ] Arquitetura
+  - [ ] 3-Tier
+  - [ ] Onion 
+  - [ ] Hexagonal
+  - [ ] CQRS - Command Query Responsability Segregation
+  - [ ] Event Sourcing
+  - [ ] DDD - Domain-Driven Design
+ - [ ] ...
 

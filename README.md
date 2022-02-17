@@ -1,9 +1,9 @@
 # Fundamentos da arquitetura de software
 O propósito desse repositório é armazenar estudos sobre o assunto e servir de repositório de consulta, mostrando as definições e exemplos.
 
-## 📝 Conteúdos a serem estudados:
+## ✍ Conteúdos a serem estudados
  
-- [ ] Programação orientada a objetos
+- [ ] 👨‍👨‍👧‍👦 Programação orientada a objetos
   - [ ] Pilares
   - [ ] Estado e Comportamento
   - [ ] Herança
@@ -12,18 +12,17 @@ O propósito desse repositório é armazenar estudos sobre o assunto e servir de
   - [ ] Encapsulamento
   - [ ] Interface x Implementação
   - [ ] Herança x Composição
-- [ ] S.O.L.I.D
-  - [ ] Princípios 
+- [ ] 🧱 S.O.L.I.D
   - [ ] S - Single Responsability
   - [ ] O - Open Closed
   - [ ] L - Liskov Subtitution 
   - [ ] I - Interface Segregation
   - [ ] D - Dependency Inversion
-- [ ] Injeção de dependência
+- [ ] 💉 Injeção de dependência
   - [ ] ...
 - [ ] Clean Code
   - [ ] ...
-- [ ] Design Patterns
+- [ ] 🧰 Design Patterns
   - [ ] Criacionais
     - [ ] Factory Method
     - [ ] Singleton

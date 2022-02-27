@@ -13,7 +13,7 @@ O propósito desse repositório é armazenar estudos sobre o assunto e servir de
   - [ ] Interface x Implementação
   - [ ] Herança x Composição
 - [ ] 🧱 S.O.L.I.D
-  - [ ] S - Single Responsability
+  - [x] S - Single Responsability
   - [ ] O - Open Closed
   - [ ] L - Liskov Subtitution 
   - [ ] I - Interface Segregation

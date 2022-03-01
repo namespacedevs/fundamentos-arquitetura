@@ -14,7 +14,7 @@ O propósito desse repositório é armazenar estudos sobre o assunto e servir de
   - [ ] Herança x Composição
 - [ ] 🧱 S.O.L.I.D
   - [x] S - Single Responsability
-  - [ ] O - Open Closed
+  - [x] O - Open Closed
   - [ ] L - Liskov Subtitution 
   - [ ] I - Interface Segregation
   - [ ] D - Dependency Inversion

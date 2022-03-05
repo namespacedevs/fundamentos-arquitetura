@@ -2,7 +2,7 @@
 
   
 
-O principio definido pela letra '**O**' do solid é o **OCP** (Open Closed Principle) e ele diz que:
+O princípio definido pela letra '**O**' do SOLID é o **OCP** (Open Closed Principle) e ele diz que:
 
 > Deve ser possível estender o comportamento de uma classe sem modificá-la.
 > 
@@ -36,9 +36,9 @@ const correios = new ServicoDeFrete(ServicosDeFrete.correios);
 const valorDoFrete = correios.calcularValorDaEntrega(2);
 
 ```
-A classe funciona para o propósito, porém ela fere o **OCP**, pois para cada novo serviço será necessário **modificar** a classe e incluir o novo comportamento. Dessa forma, as chances de inserir um novo bug no sistema são altas.
+A classe funciona para o propósito, porém ela fere o **OCP**. Pois para cada novo serviço, será necessário **modificar** a classe e incluir o novo comportamento. Dessa forma, as chances de inserir um novo bug no sistema são altas.
 
-Para cumprir o **OCP**, a refatoração, neste caso é, simples. Basta transformar o ```ServicoDeFrete``` em uma interface ou classe abstrata para abstrair o comportamento e implementar uma classe concreta para cada serviço a ser disponibilizado.
+Para cumprir o **OCP**, a refatoração, neste caso, é simples. Basta transformar o ```ServicoDeFrete``` em uma interface ou classe abstrata para abstrair o comportamento e implementar uma classe concreta para cada serviço a ser disponibilizado.
 ```typescript
 interface  ServicoDeFrete  {
 	calcularValorDaEntrega(peso:  number):  number

@@ -28,7 +28,7 @@ class ServicoDeFrete {
         if(this.servico == ServicosDeFrete.jadlog){
             return peso * 0.2
         }
-        throw `Calculo do serviço ${this.servico} não implementado.`
+        throw `Cálculo do serviço ${this.servico} não implementado.`
     }
 }
 

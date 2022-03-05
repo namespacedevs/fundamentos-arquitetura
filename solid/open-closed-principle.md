@@ -23,10 +23,10 @@ class ServicoDeFrete {
     servico: ServicosDeFrete
     calcularValorDaEntrega(peso: number){
         if(this.servico == ServicosDeFrete.correios){
-            return peso * 0,3
+            return peso * 0.3
         }
         if(this.servico == ServicosDeFrete.jadlog){
-            return peso * 0,2
+            return peso * 0.2
         }
         throw `Calculo do serviço ${this.servico} não implementado.`
     }

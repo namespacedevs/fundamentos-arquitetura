@@ -2,12 +2,12 @@
 
   
 
-O principio definido pela letra '**o**' do solid é o **ocp**(open closed principle) e ele diz que:
+O principio definido pela letra '**O**' do solid é o **OCP** (Open Closed Principle) e ele diz que:
 
-> Você deve ser capaz de estender o comportamento de uma classe sem modifica-la
+> Deve ser possível estender o comportamento de uma classe sem modificá-la.
 > 
 
-Para este exemplo vamos usar a classe  ```ServicoDeFrete```, ela recebe um serviço de frete(exemplo: correios e jadlog) e com base nele calcula o valor do frete.
+Para este exemplo, vamos usar a classe  ```ServicoDeFrete```. Ela recebe um serviço de frete (exemplo: correios e jadlog) e, com base nisso, calcula o valor do frete.
 
 ```typescript
 enum ServicosDeFrete {
@@ -36,9 +36,9 @@ const correios = new ServicoDeFrete(ServicosDeFrete.correios);
 const valorDoFrete = correios.calcularValorDaEntrega(2);
 
 ```
-A classe funciona para o proposito, porém ela fere o **ocp**, pois para cada novo serviço será necessario **modificar** a classe e incluir o novo comportamento, dessa forma as chances de inserir um novo bug no sistema é alta.
+A classe funciona para o propósito, porém ela fere o **OCP**, pois para cada novo serviço será necessário **modificar** a classe e incluir o novo comportamento. Dessa forma, as chances de inserir um novo bug no sistema são altas.
 
-para cumprir o **ocp** a refatoração neste caso é simples, basta transformar o ServicoDeFrete em uma interface ou classe abstrata para abstrair o comportamento e implementar uma classe concreta para cada serviço que queira disponibilizar.
+Para cumprir o **OCP**, a refatoração, neste caso é, simples. Basta transformar o ```ServicoDeFrete``` em uma interface ou classe abstrata para abstrair o comportamento e implementar uma classe concreta para cada serviço a ser disponibilizado.
 ```typescript
 interface  ServicoDeFrete  {
 	calcularValorDaEntrega(peso:  number):  number
@@ -66,4 +66,4 @@ const valorDoFreteJadlog = jadlog.calcularValorDaEntrega(2);
 
 ```
 
-Pronto, agora somos capazer de implementar um novo comportamento sem modificar a classe a nossa classe atendendo o **ocp**.
+Pronto! Agora somos capazes de implementar um novo comportamento sem modificar a nossa classe atendendo o **OCP**.

@@ -64,3 +64,81 @@ Ao tentar repetir nosso teste obtemos a violação do principio, o pinguim mesmo
 	[ERR]: "Executed JavaScript Failed:"
 	[ERR]: "Error: Pinguim não voa!".
 ```
+
+
+<h2>Atendendo do principio</h2>
+
+Atender o principio de substituição de Liskov irá tornar suas abstrações mais coesas. para demostrar isso vamos melhorar nossa definção de aves para o contexto do voo.
+**Aves** **que voam** possuem a classificação de **Carinatas** e as **que não voam** são denominadas como **Ratitas**.  Além disso, uma caracterisca curiosa das aves é que todas tem bico, sendo assim a interface ou classe abstrata Ave continua tendo sua importancia e com sua implementação valida. depois de toda essa estruturação e contexto nossas classes ficam assim:
+```typescript
+abstract  class  Ave  {
+	bicar():  void  {
+		console.log('bicando...')
+	}
+}
+```
+
+```typescript
+abstract  class  Carinata  extends  Ave  {
+	voar():  void  {
+		console.log('Carinata voando...')
+	}
+} 
+
+abstract  class  Ratita  extends  Ave  {
+	bicar():  void  {
+		console.log('Ratita bicando...')
+	}
+}
+```
+
+```typescript
+class  Aguia  implements  Carinata{
+	bicar():  void  {
+		console.log('Aguia bicando.');
+	}
+	voar():  void  {
+		console.log('Aguia voando a 240km/h.')
+	}
+} 
+
+class  Pardal  implements  Carinata{
+	bicar():  void  {
+		console.log('Pardal bicando.');
+	}
+	voar():  void  {
+		console.log('Pardal voando a 46 km/h.')
+	}
+}
+class  Pinguim  implements  Ratita{
+	bicar():  void  {
+		console.log('Pinguim bicando.');
+	}
+}
+```
+Além das alterações nas classes é necessario modificar a função **testeVoo** para aceitar apenas **Carinata**.
+
+```typescript
+function testeVoo(ave:  Carinata)  {
+	ave.voar();
+}
+
+const aguia =  new  Aguia();
+const pardal =  new  Pardal();
+
+testeVoo(aguia);
+testeVoo(pardal);
+```
+Dessa forma garantimos a integridade do sistema, que não será quebrado por falta de implementação de um classe que possui um métodos mais que não implementa nada no mesmo.
+
+além disso podemos testar a substituição da **Ave** por **qualquer** outra **derivada**, usando a seguinte função:
+```typescript
+function testeBicar(ave:  Ave)  {
+	ave.bicar();
+}
+testeBicada(aguia);
+testeBicada(pardal);
+testeBicada(pinguim);
+```
+E dessa forma atendemos o principio de substituição de Liskov.
+

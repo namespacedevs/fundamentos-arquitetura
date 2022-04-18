@@ -16,7 +16,7 @@ O propósito desse repositório é armazenar estudos sobre o assunto e servir de
   - [x] S - Single Responsability
   - [x] O - Open Closed
   - [x] L - Liskov Subtitution 
-  - [ ] I - Interface Segregation
+  - [x] I - Interface Segregation
   - [ ] D - Dependency Inversion
 - [ ] 💉 Injeção de dependência
   - [ ] ...

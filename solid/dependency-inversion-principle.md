@@ -37,3 +37,37 @@ class  UsuarioRepositorio  {
 }
 ```
 Note que a classe **UsuarioServico** depende diretamente da classe **UsuarioRepositorio**, violando assim o **DIP**(Dependency Inversion Principle).
+
+<h2>Atendendo do principio</h2>
+
+Para atender o principio é necessario substituir o uso direto da implementação dentro do UsuarioServico e implementar a interface no repositorio.
+
+```typescript
+interface  UsuarioRepositorioInterface  {
+	inserir(nome:  string):void;
+	apagar(id:  number):  void;
+}
+```
+```typescript
+class  UsuarioRepositorio implements  UsuarioRepositorioInterface {
+	inserir(nome:  string): void {
+		console.log(`${nome}, foi cadastrado com sucesso!.`);
+	}
+	apagar(id:  number): void {
+		console.log(`Usuario de id ${id} foi apagado.`);
+	}
+}
+```
+```typescript
+class  UsuarioServico{
+	constructor(private _usuarioRepositorio:  UsuarioRepositorioInterface){  }
+	criar(nome:  string):  void{
+		return  this._usuarioRepositorio.inserir(nome);
+	}
+	remover(id:  number):  void{
+		return  this._usuarioRepositorio.apagar(id);
+	}
+}
+```
+
+Note que agora o **UsuarioService** está aberto para receber qualquer outro repositório desde que esse atenda a interface **UsuarioRepositorioInterface**, sendo assim dependendo apenas da abstração(interface) e não da implementação(classe concreta), satisfazendo o DIP.

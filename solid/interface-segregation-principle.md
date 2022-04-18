@@ -72,3 +72,36 @@ class  Kombi  implements  Carro  {
 	}
 }
 ```
+<h2>Atendendo do principio</h2>
+
+Atender o principio do **ISP** significa dizer que você terá que dividir seus contratos em contratos menores e mais especificos. no nosso caso Carro e CarroComAirbag.
+```typescript
+interface  Carro  {
+	ligar():  boolean;
+}
+interface  CarroComAirbag  extends  Carro  {
+	acionarAirbag():  boolean;
+}
+```
+Após a segregação da interface o principio é atendido, veja como ficam as classe concretas **Corola** e **Kombi**.
+```typescript
+class  Corola  implements  CarroComAirbag  {
+	ligar():  boolean  {
+		console.log('Carro ligado com sucesso!');
+		return  true;
+	}
+	acionarAirbag():  boolean  {
+		console.log('Airbag acionado com sucesso!');
+		return  true;
+	}
+}
+```
+
+```typescript
+class  Kombi  implements  Carro  {
+	ligar():  boolean  {
+		console.log('Carro ligado com sucesso!');
+		return  true;
+	}
+}
+```

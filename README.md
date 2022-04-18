@@ -12,12 +12,12 @@ O propósito desse repositório é armazenar estudos sobre o assunto e servir de
   - [ ] Encapsulamento
   - [ ] Interface x Implementação
   - [ ] Herança x Composição
-- [ ] 🧱 S.O.L.I.D
+- [x] 🧱 S.O.L.I.D
   - [x] S - Single Responsability
   - [x] O - Open Closed
   - [x] L - Liskov Subtitution 
   - [x] I - Interface Segregation
-  - [ ] D - Dependency Inversion
+  - [x] D - Dependency Inversion
 - [ ] 💉 Injeção de dependência
   - [ ] ...
 - [ ] Clean Code

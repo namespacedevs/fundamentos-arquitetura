@@ -1,5 +1,10 @@
-## 🧰 Design Patterns
 
- **Patterns** são formas de resolver problemas recorrentes no desenvolvimento de software. Se trata de uma definição clara de como solucionar um problema especifico. 
+## 🏭 Criacionais
+Um Pattern criacional fornece mecanismos de criação de objetos, que por sua vez acabam aumentando a flexibilidade e reutilização de código.
+Alguns dos Patterns que pertencem a esse grupo são:
+ - Factory Method
+ - Abstract Factory
+ - Builder
+ - Prototype
+ - Singleton
 
-Eles se dividem em três grupos, são eles **criacionais**, **estruturais** e **comportamentais**. 
